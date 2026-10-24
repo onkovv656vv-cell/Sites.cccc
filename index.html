@@ -90,8 +90,8 @@
             background: none;
             border: none;
             color: #94a3b8;
-            padding: 10px 10px;
-            font-size: 13px;
+            padding: 8px 10px; /* Уменьшил padding, чтобы 5 вкладок влезли */
+            font-size: 13px;   /* Уменьшил шрифт для мобилок */
             font-weight: bold;
             cursor: pointer;
             transition: 0.3s;
@@ -130,7 +130,7 @@
         li { margin-bottom: 8px; }
         body[dir="rtl"] ul { padding-left: 0; padding-right: 20px; }
 
-        /* Кнопка */
+        /* Кнопки */
         .btn {
             display: inline-block;
             padding: 15px 30px;
@@ -144,7 +144,7 @@
             box-shadow: 0 4px 15px rgba(59, 130, 246, 0.4);
             width: 90%;
             box-sizing: border-box;
-            margin-bottom: 15px;
+            margin-bottom: 10px;
         }
         .btn:hover {
             transform: translateY(-3px);
@@ -256,23 +256,20 @@
             <button class="tab-btn" onclick="openTab(event, 'features')" data-i18n="tabFeatures">Фишки</button>
             <button class="tab-btn" onclick="openTab(event, 'install')" data-i18n="tabInstall">Установка</button>
             <button class="tab-btn" onclick="openTab(event, 'faq')" data-i18n="tabFaq">FAQ</button>
+            <button class="tab-btn" onclick="openTab(event, 'channels')" data-i18n="tabChannels">Каналы</button>
         </div>
 
         <!-- Вкладка 1: Главная -->
         <div id="home" class="tab-content active">
-            
             <div class="notice" data-i18n="notice">
                 Внимание: Магазины обновляются, покупка V5 временно недоступна.
             </div>
-
             <p data-i18n="homeDesc">
                 Начни с Arceus X NEO. Самый простой способ начать — бесплатно навсегда. Без обязательств.
             </p>
-            
             <p style="color: #60a5fa; font-weight: bold; font-size: 13px;" data-i18n="stats">
                 2,933,530 ключей выдано • Рейтинг 4.7/5
             </p>
-
             <a href="https://github.com/SPDMTiahh/Updates/releases/download/2.3.7/Roblox.Arceus.X.NEO.2.3.7.apk" download class="btn" data-i18n="btnDownload">
                 ⬇️ Скачать NEO APK
             </a>
@@ -280,9 +277,7 @@
 
         <!-- Вкладка 2: Фишки -->
         <div id="features" class="tab-content">
-            
             <div class="section-title" data-i18n="neoTitle">NEO (Бесплатно)</div>
-            
             <div class="feature-item"><span class="emoji">🎯</span><div><strong data-i18n="f1t">Для фокуса</strong><p data-i18n="f1d">Минимальный интерфейс. Ничего лишнего.</p></div></div>
             <div class="feature-item"><span class="emoji">⚡</span><div><strong data-i18n="f2t">Легкое ядро</strong><p data-i18n="f2d">Быстрый запуск и плавная работа.</p></div></div>
             <div class="feature-item"><span class="emoji">🔒</span><div><strong data-i18n="f3t">Безопасность</strong><p data-i18n="f3d">Защищенные процессы снижают риски.</p></div></div>
@@ -290,23 +285,10 @@
 
             <div class="section-title" data-i18n="v5Title">V5 (Премиум)</div>
             <p style="font-size: 13px;" data-i18n="v5Desc">Первый в мире ИИ-инжектор. Мощь и инновации.</p>
-
             <div class="feature-item"><span class="emoji">✨</span><div><strong data-i18n="v51t">Невиданный интерфейс</strong><p data-i18n="v51d">Полностью анимированный UI нового поколения.</p></div></div>
             <div class="feature-item"><span class="emoji">🧠</span><div><strong data-i18n="v52t">Первый ИИ-инжектор</strong><p data-i18n="v52d">Встроенный ИИ помогает писать и исправлять скрипты.</p></div></div>
             <div class="feature-item"><span class="emoji">🚀</span><div><strong data-i18n="v53t">Экстремальная производительность</strong><p data-i18n="v53d">Молниеносная скорость даже на слабых устройствах.</p></div></div>
             <div class="feature-item"><span class="emoji">🎵</span><div><strong data-i18n="v54t">Самый инновационный</strong><p data-i18n="v54d">Перевод UI на лету, музыкальный плеер и динамический HUB.</p></div></div>
-
-            <div class="pricing-card">
-                <h3 data-i18n="pTitle">NEO Free</h3>
-                <p data-i18n="pDesc">Идеален для первых скриптов.</p>
-                <ul>
-                    <li data-i18n="pL1">Быстрое ядро</li>
-                    <li data-i18n="pL2">Безопасное выполнение</li>
-                    <li data-i18n="pL3">Чистый интерфейс</li>
-                </ul>
-            </div>
-            
-            <a href="#" onclick="openTab(event, 'home')" class="btn" style="margin-top: 15px;" data-i18n="btnDownloadNeo">Скачать NEO</a>
         </div>
 
         <!-- Вкладка 3: Установка -->
@@ -317,14 +299,12 @@
                 <li data-i18n="i2">2. Открой, получи ключ и загрузи первый скрипт.</li>
                 <li data-i18n="i3">3. Наслаждайся. Если нужно больше — перейди на V5.</li>
             </ul>
-
             <p style="margin-top: 20px;"><strong data-i18n="devTitle">Поддерживаемые устройства:</strong></p>
             <ul>
                 <li><strong>Android:</strong> <span data-i18n="devAnd">Рекомендуется (Roblox 2.742.1059)</span></li>
                 <li><strong>Android VNG:</strong> <span data-i18n="devVng">Только для региона Вьетнам (Обновляется)</span></li>
                 <li><strong>iOS:</strong> <span data-i18n="devIos">Доступность зависит от региона (Обновляется)</span></li>
             </ul>
-            
             <a href="#" onclick="openTab(event, 'home')" class="btn" data-i18n="btnGoDownload">Перейти к скачиванию</a>
         </div>
 
@@ -356,6 +336,19 @@
             </div>
         </div>
 
+        <!-- НОВАЯ Вкладка 5: Каналы -->
+        <div id="channels" class="tab-content">
+            <p data-i18n="channelsDesc">Подпишись на наши YouTube каналы, чтобы быть в курсе обновлений и новостей!</p>
+            
+            <a href="https://youtube.com/@spdmteam?si=d4MSyNT5UieaWemA" target="_blank" class="btn" data-i18n="btnArceusChannel">
+                ▶️ Канал Arceus X
+            </a>
+            <br>
+            <a href="https://www.youtube.com/@kik0_99f9" target="_blank" class="btn" data-i18n="btnKigamesChannel">
+                ▶️ Канал KIGEMES
+            </a>
+        </div>
+
         <!-- Юридический текст -->
         <div class="legal">
             <p data-i18n="legalCopy">© 2026 Arceus X Team. All rights reserved.</p>
@@ -381,7 +374,7 @@
 
         const translations = {
             ru: {
-                tabHome: "Главная", tabFeatures: "Фишки", tabInstall: "Установка", tabFaq: "FAQ",
+                tabHome: "Главная", tabFeatures: "Фишки", tabInstall: "Установка", tabFaq: "FAQ", tabChannels: "Каналы",
                 notice: "<b>Внимание:</b> Магазины обновляются, покупка V5 временно недоступна.",
                 homeDesc: "Начни с Arceus X NEO. Самый простой способ начать — бесплатно навсегда. Без обязательств.",
                 stats: "2,933,530 ключей выдано • Рейтинг 4.7/5",
@@ -396,9 +389,6 @@
                 v52t: "Первый ИИ-инжектор", v52d: "Встроенный ИИ помогает писать и исправлять скрипты.",
                 v53t: "Экстремальная производительность", v53d: "Молниеносная скорость даже на слабых устройствах.",
                 v54t: "Самый инновационный", v54d: "Перевод UI на лету, музыкальный плеер и динамический HUB.",
-                pTitle: "NEO Free", pDesc: "Идеален для первых скриптов.",
-                pL1: "Быстрое ядро", pL2: "Безопасное выполнение", pL3: "Чистый интерфейс",
-                btnDownloadNeo: "Скачать NEO",
                 instTitle: "Начало работы в 3 шага:",
                 i1: "1. Скачай NEO для своего устройства.",
                 i2: "2. Открой, получи ключ и загрузи первый скрипт.",
@@ -408,23 +398,20 @@
                 devVng: "Только для региона Вьетнам (Обновляется)",
                 devIos: "Доступность зависит от региона (Обновляется)",
                 btnGoDownload: "Перейти к скачиванию",
-                q1: "Могут ли забанить аккаунт?",
-                a1: "Да, хотя это редкость. Чаще банят в конкретных играх. Настоятельно рекомендуем использовать твинк (доп. аккаунт).",
-                q2: "Все ли скрипты работают?",
-                a2: "Не 100%, но Arceus X поддерживает около 99% всех скриптов благодаря кастомному модулю и UNC Support.",
-                q3: "Где искать скрипты?",
-                a3: "Рекомендуем ScriptBlox, RbxScripts и встроенный 'Script Hub' в самом Arceus X.",
-                q4: "Это легально?",
-                a4: "Технически да, но есть риск бана (хотя с конца 2020 таких случаев не фиксировали).",
-                q5: "NEO бесплатен навсегда?",
-                a5: "Да. V5 — опционально, если нужна ИИ-мощь.",
-                q6: "Остались вопросы?",
-                a6: "Заходи на наш Discord сервер и создавай тикет, наши ребята помогут.",
+                q1: "Могут ли забанить аккаунт?", a1: "Да, хотя это редкость. Чаще банят в конкретных играх. Настоятельно рекомендуем использовать твинк (доп. аккаунт).",
+                q2: "Все ли скрипты работают?", a2: "Не 100%, но Arceus X поддерживает около 99% всех скриптов благодаря кастомному модулю и UNC Support.",
+                q3: "Где искать скрипты?", a3: "Рекомендуем ScriptBlox, RbxScripts и встроенный 'Script Hub' в самом Arceus X.",
+                q4: "Это легально?", a4: "Технически да, но есть риск бана (хотя с конца 2020 таких случаев не фиксировали).",
+                q5: "NEO бесплатен навсегда?", a5: "Да. V5 — опционально, если нужна ИИ-мощь.",
+                q6: "Остались вопросы?", a6: "Заходи на наш Discord сервер и создавай тикет, наши ребята помогут.",
+                channelsDesc: "Подпишись на наши YouTube каналы, чтобы быть в курсе обновлений и новостей!",
+                btnArceusChannel: "▶️ Канал Arceus X",
+                btnKigamesChannel: "▶️ Канал KIGEMES",
                 legalCopy: "© 2026 Arceus X Team. Все права защищены.",
                 legalDisc: "Arceus X — это независимый инструмент, который не связан с Roblox Corporation и не одобрен ею."
             },
             en: {
-                tabHome: "Home", tabFeatures: "Features", tabInstall: "Install", tabFaq: "FAQ",
+                tabHome: "Home", tabFeatures: "Features", tabInstall: "Install", tabFaq: "FAQ", tabChannels: "Channels",
                 notice: "<b>Notice:</b> Stores are updating, V5 purchases temporarily unavailable.",
                 homeDesc: "Start with Arceus X NEO. The easiest way to get into scripting — free forever. No commitment.",
                 stats: "2,933,530 keys completed • 4.7/5 rating",
@@ -439,9 +426,6 @@
                 v52t: "First AI Executor", v52d: "Built-in AI helps write and fix scripts.",
                 v53t: "Extreme Performance", v53d: "Lightning-fast speed even on low-end devices.",
                 v54t: "The Most Innovative", v54d: "Instant UI translation, music player, dynamic HUB.",
-                pTitle: "NEO Free", pDesc: "Perfect for your first scripts.",
-                pL1: "Fast, minimal core", pL2: "Secure-by-default execution", pL3: "Clean UI",
-                btnDownloadNeo: "Download NEO",
                 instTitle: "Get started in 3 steps:",
                 i1: "1. Download NEO for your device.",
                 i2: "2. Open, complete key system, and load your first script.",
@@ -451,23 +435,20 @@
                 devVng: "Vietnam region only (Updating)",
                 devIos: "Availability may vary by region (Updating)",
                 btnGoDownload: "Go to download",
-                q1: "Can my account get banned?",
-                a1: "Yes, although it is quite rare. More likely, you might get banned from specific games. We strongly recommend using an alt account.",
-                q2: "Do all scripts work?",
-                a2: "Not 100%, but Arceus X supports about 99% of all scripts thanks to its custom module and UNC Support.",
-                q3: "How can I find scripts?",
-                a3: "We recommend ScriptBlox, RbxScripts, and the built-in 'Script Hub' of Arceus X.",
-                q4: "Are exploits allowed?",
-                a4: "Technically legal, but there is a risk of banning (though no such cases reported since late 2020).",
-                q5: "Is NEO really free?",
-                a5: "Yes, free forever. V5 is optional if you want more power.",
-                q6: "Have any other questions?",
-                a6: "Join our Discord server and ask one of our staff by creating a ticket.",
+                q1: "Can my account get banned?", a1: "Yes, although it is quite rare. More likely, you might get banned from specific games. We strongly recommend using an alt account.",
+                q2: "Do all scripts work?", a2: "Not 100%, but Arceus X supports about 99% of all scripts thanks to its custom module and UNC Support.",
+                q3: "How can I find scripts?", a3: "We recommend ScriptBlox, RbxScripts, and the built-in 'Script Hub' of Arceus X.",
+                q4: "Are exploits allowed?", a4: "Technically legal, but there is a risk of banning (though no such cases reported since late 2020).",
+                q5: "Is NEO really free?", a5: "Yes, free forever. V5 is optional if you want more power.",
+                q6: "Have any other questions?", a6: "Join our Discord server and ask one of our staff by creating a ticket.",
+                channelsDesc: "Subscribe to our YouTube channels to stay up to date with updates and news!",
+                btnArceusChannel: "▶️ Arceus X Channel",
+                btnKigamesChannel: "▶️ KIGEMES Channel",
                 legalCopy: "© 2026 Arceus X Team. All rights reserved.",
                 legalDisc: "Arceus X is an independent tool and isn’t affiliated with or endorsed by Roblox Corporation."
             },
             uk: {
-                tabHome: "Головна", tabFeatures: "Фішки", tabInstall: "Встановлення", tabFaq: "FAQ",
+                tabHome: "Головна", tabFeatures: "Фішки", tabInstall: "Встановлення", tabFaq: "FAQ", tabChannels: "Канали",
                 notice: "<b>Увага:</b> Магазини оновлюються, покупка V5 тимчасово недоступна.",
                 homeDesc: "Почни з Arceus X NEO. Найпростіший спосіб почати — безкоштовно назавжди. Без зобов'язань.",
                 stats: "2,933,530 ключів видано • Рейтинг 4.7/5",
@@ -482,9 +463,6 @@
                 v52t: "Перший ШІ-інжектор", v52d: "Вбудований ШІ допомагає писати та виправляти скрипти.",
                 v53t: "Екстремальна продуктивність", v53d: "Блискавична швидкість навіть на слабких пристроях.",
                 v54t: "Найінноваційніший", v54d: "Переклад UI на льоту, музичний плеєр та динамічний HUB.",
-                pTitle: "NEO Free", pDesc: "Ідеальний для перших скриптів.",
-                pL1: "Швидке ядро", pL2: "Безпечне виконання", pL3: "Чистий інтерфейс",
-                btnDownloadNeo: "Завантажити NEO",
                 instTitle: "Початок роботи за 3 кроки:",
                 i1: "1. Завантаж NEO для свого пристрою.",
                 i2: "2. Відкрий, отримай ключ та завантаж перший скрипт.",
@@ -494,23 +472,20 @@
                 devVng: "Тільки для регіону В'єтнам (Оновлюється)",
                 devIos: "Доступність залежить від регіону (Оновлюється)",
                 btnGoDownload: "Перейти до завантаження",
-                q1: "Чи можуть забанити акаунт?",
-                a1: "Так, хоча це рідкість. Частіше банять у конкретних іграх. Рекомендуємо використовувати твінк.",
-                q2: "Чи всі скрипти працюють?",
-                a2: "Не 100%, але Arceus X підтримує близько 99% завдяки кастомному модулю та UNC Support.",
-                q3: "Де шукати скрипти?",
-                a3: "Рекомендуємо ScriptBlox, RbxScripts та вбудований 'Script Hub'.",
-                q4: "Це легально?",
-                a4: "Технічно так, але є ризик бану (хоча з кінця 2020 таких випадків не фіксували).",
-                q5: "NEO безкоштовний назавжди?",
-                a5: "Так. V5 — опціонально, якщо потрібна ШІ-потужність.",
-                q6: "Залишилися питання?",
-                a6: "Заходь на наш Discord сервер і створюй тікет, наші хлопці допоможуть.",
+                q1: "Чи можуть забанити акаунт?", a1: "Так, хоча це рідкість. Частіше банять у конкретних іграх. Рекомендуємо використовувати твінк.",
+                q2: "Чи всі скрипти працюють?", a2: "Не 100%, але Arceus X підтримує близько 99% завдяки кастомному модулю та UNC Support.",
+                q3: "Де шукати скрипти?", a3: "Рекомендуємо ScriptBlox, RbxScripts та вбудований 'Script Hub'.",
+                q4: "Це легально?", a4: "Технічно так, але є ризик бану (хоча з кінця 2020 таких випадків не фіксували).",
+                q5: "NEO безкоштовний назавжди?", a5: "Так. V5 — опціонально, якщо потрібна ШІ-потужність.",
+                q6: "Залишилися питання?", a6: "Заходь на наш Discord сервер і створюй тікет, наші хлопці допоможуть.",
+                channelsDesc: "Підпишись на наші YouTube канали, щоб бути в курсі оновлень та новин!",
+                btnArceusChannel: "▶️ Канал Arceus X",
+                btnKigamesChannel: "▶️ Канал KIGEMES",
                 legalCopy: "© 2026 Arceus X Team. Усі права захищені.",
                 legalDisc: "Arceus X — це незалежний інструмент, який не пов'язаний з Roblox Corporation."
             },
             ar: {
-                tabHome: "الرئيسية", tabFeatures: "المميزات", tabInstall: "التثبيت", tabFaq: "الأسئلة الشائعة",
+                tabHome: "الرئيسية", tabFeatures: "المميزات", tabInstall: "التثبيت", tabFaq: "الأسئلة الشائعة", tabChannels: "القنوات",
                 notice: "<b>إشعار:</b> يتم تحديث المتاجر، عمليات شراء V5 غير متاحة مؤقتًا.",
                 homeDesc: "ابدأ مع Arceus X NEO. أسهل طريقة لبدء البرمجة النصية — مجانًا للأبد. بدون التزام.",
                 stats: "تم إنجاز 2,933,530 مفتاحًا • تقييم 4.7/5",
@@ -525,9 +500,6 @@
                 v52t: "أول أداة تنفيذ بالذكاء الاصطناعي", v52d: "الذكاء الاصطناعي المدمج يساعد في كتابة وإصلاح النصوص.",
                 v53t: "أداء فائق", v53d: "سرعة البرق حتى على الأجهزة الضعيفة.",
                 v54t: "الأكثر ابتكارًا", v54d: "ترجمة فورية للواجهة، مشغل موسيقى، ومركز ديناميكي.",
-                pTitle: "NEO Free", pDesc: "مثالي لنصوصك البرمجية الأولى.",
-                pL1: "نواة سريعة", pL2: "تنفيذ آمن", pL3: "واجهة نظيفة",
-                btnDownloadNeo: "تحميل NEO",
                 instTitle: "ابدأ في 3 خطوات:",
                 i1: "1. قم بتنزيل NEO لجهازك.",
                 i2: "2. افتح، أكمل نظام المفاتيح، وقم بتحميل النص الأول.",
@@ -537,18 +509,15 @@
                 devVng: "منطقة فيتنام فقط (قيد التحديث)",
                 devIos: "قد يختلف التوفر حسب المنطقة (قيد التحديث)",
                 btnGoDownload: "اذهب للتحميل",
-                q1: "هل يمكن حظر حسابي؟",
-                a1: "نعم، على الرغم من أنه نادر جدًا. من المرجح أن يتم حظرك من ألعاب معينة. نوصي بشدة باستخدام حساب بديل.",
-                q2: "هل تعمل جميع النصوص؟",
-                a2: "ليس 100٪، لكن Arceus X يدعم حوالي 99٪ من جميع النصوص بفضل وحدته المخصصة ودعم UNC.",
-                q3: "كيف يمكنني العثور على نصوص؟",
-                a3: "نوصي بـ ScriptBlox و RbxScripts و 'Script Hub' المدمج في Arceus X.",
-                q4: "هل الثغرات مسموح بها؟",
-                a4: "قانونية من الناحية الفنية، ولكن هناك خطر الحظر (على الرغم من عدم الإبلاغ عن مثل هذه الحالات منذ أواخر 2020).",
-                q5: "هل NEO مجاني حقًا؟",
-                a5: "نعم، مجاني للأبد. V5 اختياري إذا كنت تريد المزيد من القوة.",
-                q6: "هل لديك أي أسئلة أخرى؟",
-                a6: "انضم إلى خادم Discord الخاص بنا واسأل أحد موظفينا بإنشاء تذكرة.",
+                q1: "هل يمكن حظر حسابي؟", a1: "نعم، على الرغم من أنه نادر جدًا. من المرجح أن يتم حظرك من ألعاب معينة. نوصي بشدة باستخدام حساب بديل.",
+                q2: "هل تعمل جميع النصوص؟", a2: "ليس 100٪، لكن Arceus X يدعم حوالي 99٪ من جميع النصوص بفضل وحدته المخصصة ودعم UNC.",
+                q3: "كيف يمكنني العثور على نصوص؟", a3: "نوصي بـ ScriptBlox و RbxScripts و 'Script Hub' المدمج في Arceus X.",
+                q4: "هل الثغرات مسموح بها؟", a4: "قانونية من الناحية الفنية، ولكن هناك خطر الحظر (على الرغم من عدم الإبلاغ عن مثل هذه الحالات منذ أواخر 2020).",
+                q5: "هل NEO مجاني حقًا؟", a5: "نعم، مجاني للأبد. V5 اختياري إذا كنت تريد المزيد من القوة.",
+                q6: "هل لديك أي أسئلة أخرى؟", a6: "انضم إلى خادم Discord الخاص بنا واسأل أحد موظفينا بإنشاء تذكرة.",
+                channelsDesc: "اشترك في قنواتنا على YouTube لتبقى على اطلاع بالتحديثات والأخبار!",
+                btnArceusChannel: "▶️ قناة Arceus X",
+                btnKigamesChannel: "▶️ قناة KIGEMES",
                 legalCopy: "© 2026 Arceus X Team. كل الحقوق محفوظة.",
                 legalDisc: "Arceus X هي أداة مستقلة ولا تابعة لـ Roblox Corporation ولا معتمدة منها."
             }
