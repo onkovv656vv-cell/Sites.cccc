@@ -90,8 +90,8 @@
             background: none;
             border: none;
             color: #94a3b8;
-            padding: 8px 10px; /* Уменьшил padding, чтобы 5 вкладок влезли */
-            font-size: 13px;   /* Уменьшил шрифт для мобилок */
+            padding: 8px 10px;
+            font-size: 13px;
             font-weight: bold;
             cursor: pointer;
             transition: 0.3s;
@@ -132,7 +132,7 @@
 
         /* Кнопки */
         .btn {
-            display: inline-block;
+            display: block; /* Изменил на block, чтобы кнопки не наезжали друг на друга */
             padding: 15px 30px;
             background: linear-gradient(135deg, #3b82f6, #8b5cf6);
             color: white;
@@ -144,7 +144,8 @@
             box-shadow: 0 4px 15px rgba(59, 130, 246, 0.4);
             width: 90%;
             box-sizing: border-box;
-            margin-bottom: 10px;
+            margin: 0 auto 15px auto; /* Центрируем и делаем отступ снизу */
+            text-align: center;
         }
         .btn:hover {
             transform: translateY(-3px);
@@ -197,21 +198,6 @@
             border-bottom: 1px solid #334155;
             padding-bottom: 5px;
         }
-
-        /* Карточка NEO Free */
-        .pricing-card {
-            border: 1px solid #3b82f6;
-            border-radius: 12px;
-            padding: 15px;
-            margin-top: 15px;
-            text-align: left;
-            background: rgba(59, 130, 246, 0.1);
-        }
-        body[dir="rtl"] .pricing-card { text-align: right; }
-        .pricing-card h3 { margin-top: 0; color: #ffffff; font-size: 16px; margin-bottom: 5px; }
-        .pricing-card p { font-size: 12px; margin-bottom: 10px; color: #94a3b8; }
-        .pricing-card ul { padding-left: 15px; margin-bottom: 0; color: #cbd5e1; }
-        body[dir="rtl"] .pricing-card ul { padding-left: 0; padding-right: 15px; }
 
         /* FAQ */
         .faq-item {
@@ -336,14 +322,13 @@
             </div>
         </div>
 
-        <!-- НОВАЯ Вкладка 5: Каналы -->
+        <!-- Вкладка 5: Каналы (ИСПРАВЛЕНО) -->
         <div id="channels" class="tab-content">
             <p data-i18n="channelsDesc">Подпишись на наши YouTube каналы, чтобы быть в курсе обновлений и новостей!</p>
             
-            <a href="https://youtube.com/@spdmteam?si=d4MSyNT5UieaWemA" target="_blank" class="btn" data-i18n="btnArceusChannel">
+            <a href="https://youtube.com/@spdmteam" target="_blank" class="btn" data-i18n="btnArceusChannel">
                 ▶️ Канал Arceus X
             </a>
-            <br>
             <a href="https://www.youtube.com/@kik0_99f9" target="_blank" class="btn" data-i18n="btnKigamesChannel">
                 ▶️ Канал KIGEMES
             </a>
